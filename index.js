@@ -127,10 +127,11 @@ makePersonObject(7,"Kevin","kevin@fake.com")
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(name) {
+  return "'Hello, my name is "+ name +"'.";
 }
 
+getName("kevin");
 
 /**
  * ### Challenge `appleIndex`
@@ -147,10 +148,15 @@ function getName(/* code here */) {
  * passing in [ 'orange', 'grape', 'apple', 'banana', 'mango' ] as the argument,
  * the returned value should be: 2.
 */
-function appleIndex(/* code here */) {
-  /* code here */
-}
+function appleIndex(ray) {
+  
+  return ray[2];
 
+} 
+appleIndex(['orange','grape','apple','banana','mango'])
+
+//let appleIndex = [ 'orange', 'grape', 'apple', 'banana', 'mango' ];
+  //console.log(appleIndex[2]);
 /**
  * ### Challenge `isItAnApple`
  * 
