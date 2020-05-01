@@ -127,11 +127,11 @@ makePersonObject(7,"Kevin","kevin@fake.com")
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(name) {
-  return "'Hello, my name is "+ name +"'.";
+function getName({id, name, email}){
+  return ('Hello, my name is ${name}');
 }
 
-getName("kevin");
+getName({id: 1, name:'Luke', email:'leia@leia.com'})
 
 /**
  * ### Challenge `appleIndex`
@@ -149,14 +149,17 @@ getName("kevin");
  * the returned value should be: 2.
 */
 function appleIndex(ray) {
-  
-  return ray[2];
-
+  let apppp = 0
+  for (let i= 0; i < ray.lenght; i++){
+    if (ray[i] === 'apple'){
+       apppp = i 
+    }
+  }
+  return apppp;
 } 
 appleIndex(['orange','grape','apple','banana','mango'])
 
-//let appleIndex = [ 'orange', 'grape', 'apple', 'banana', 'mango' ];
-  //console.log(appleIndex[2]);
+
 /**
  * ### Challenge `isItAnApple`
  * 
@@ -172,12 +175,19 @@ appleIndex(['orange','grape','apple','banana','mango'])
  * passing in [ 'orange', 'apple', 'banana', 'apples', 'apple', 'mango' ] as the argument,
  * the returned value should be: [ false, true, false, false, true, false ].
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(fruit) {
+  let veggie = []
+  for (let i= 0; i < fruit.lenght; i++){
+    if (fruit[i] === "apple"){
+      veggie.push(true)  
+    }
+    else{ veggie.push(false)}
+    
+  }
+  return veggie
 }
 
-
-
+isItAnApple(['orange', 'apple', 'banana', 'apples', 'apple', 'mango'])
 /*
 // ⭐️ Example Test Data ⭐️
 
@@ -232,6 +242,7 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
+  return `This is a {car_make} {car_model}`
 }
 
 /**
