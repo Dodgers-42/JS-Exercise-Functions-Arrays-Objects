@@ -242,11 +242,12 @@ function get3rdCar(inventory) {
 */
 function getCarInfoByIndex(inventory, index) {
   /* code here */
-  for (let i= 0; i < fruit.lenght; i++){
-  }
-  return `This is a {car_make} {car_model}`
-}
+  return inventory[index]
   
+  return "This is a inventory" + [index].car_make + " " + investory[index].car_model
+}
+console.log(getCarInfoByIndex(inventory,0))
+
 /**
  * ### Challenge `getLastCarInfo`
  * 
